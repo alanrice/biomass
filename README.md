@@ -17,6 +17,7 @@ If you are using ```biomass``` with Node.js, you can require the module:
 ```js
 var biomass = require('biomass');
 console.log(biomass.dna());
+```
 
 Documentation will be created shortly.
 
