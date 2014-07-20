@@ -12,6 +12,13 @@
   ],
   "author": "Alan Rice",
   "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "uglify-js": "~2.4.15"
+  },
+  "scripts": {
+    "build-browser": "uglifyjs biomass.js -o biomass.min.js -m -c"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/alanrice/biomass.git"

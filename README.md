@@ -1,3 +1,7 @@
+# biomass
+
+> Generate bio data from sunlight and alphabets
+
 Install
 -------
 
@@ -6,20 +10,30 @@ Install ```biomass``` with [npm](//npmjs.org):
 ```sh
 $ npm install biomass
 ```
-
-Alternatively, just include `biomass.js` via a `<script/>` in your page.
+If you are using ```biomass``` with Node.js, you can require the module:
+```js
+var biomass = require('biomass');
+```
+Alternatively, just include `biomass.min.js` via a `<script/>` in your page.
+```html
+<script src="../biomass.min.js"></script>
+```
 
 Usage
 -----
 
-If you are using ```biomass``` with Node.js, you can require the module:
 
 ```js
-var biomass = require('biomass');
-console.log(biomass.dna());
+// Sequence functions will return between 10 and 100 characters if a length is not specified:
+biomass.dna();
+=> 'catagggaccaagctctggggagcaacccataagcacgacaatcgcgataatacgtagtacgccgcttggttcgtgccttcccgcgcgagt'
+biomass.rna();
+=> 'gaguaggcuaggcauagc'
+biomass.dna({length: 15});
+=> 'ttttgtatgcgtacg'
+biomass.rna({length: 3});
+=> 'uac'
 ```
-
-Documentation will be created shortly.
 
 Contacts
 --------
