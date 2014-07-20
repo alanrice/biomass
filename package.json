@@ -1,0 +1,23 @@
+{
+  "name": "biomass",
+  "version": "0.0.1",
+  "description": "Generate bio data from sunlight and alphabets",
+  "main": "biomass.js",
+  "keywords": [
+    "bioinformatics",
+    "genomics",
+    "genetics",
+    "dna",
+    "util"
+  ],
+  "author": "Alan Rice",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alanrice/biomass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alanrice/biomass/issues"
+  },
+  "homepage": "https://github.com/alanrice/biomass"
+}
