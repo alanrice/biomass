@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Biomass by alanrice</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Biomass</h1>
+        <p>Generate bio data from sunlight and alphabets</p>
+
+        <p class="view"><a href="https://github.com/alanrice/biomass">View the Project on GitHub <small>alanrice/biomass</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/alanrice/biomass/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/alanrice/biomass/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/alanrice/biomass">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="biomass" class="anchor" href="#biomass"><span class="octicon octicon-link"></span></a>biomass</h1>
+
+<blockquote>
+<p>Generate bio data from sunlight and alphabets</p>
+</blockquote>
+
+<h2>
+<a name="install" class="anchor" href="#install"><span class="octicon octicon-link"></span></a>Install</h2>
+
+<p>Install <code>biomass</code> with <a href="//npmjs.org">npm</a>:</p>
+
+<div class="highlight highlight-sh"><pre><span class="nv">$ </span>npm install biomass
+</pre></div>
+
+<p>If you are using <code>biomass</code> with Node.js, you can require the module:</p>
+
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">biomass</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'biomass'</span><span class="p">);</span>
+</pre></div>
+
+<p>Alternatively, just include <code>biomass.min.js</code> via a <code>&lt;script/&gt;</code> in your page.</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"../biomass.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-js"><pre><span class="c1">// Sequence functions will return between 10 and 100 characters if a length is not specified:</span>
+<span class="nx">biomass</span><span class="p">.</span><span class="nx">dna</span><span class="p">();</span>
+<span class="o">=&gt;</span> <span class="s1">'catagggaccaagctctggggagcaacccataagcacgacaatcgcgataatacgtagtacgccgcttggttcgtgccttcccgcgcgagt'</span>
+<span class="nx">biomass</span><span class="p">.</span><span class="nx">rna</span><span class="p">();</span>
+<span class="o">=&gt;</span> <span class="s1">'gaguaggcuaggcauagc'</span>
+<span class="nx">biomass</span><span class="p">.</span><span class="nx">dna</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mi">15</span><span class="p">});</span>
+<span class="o">=&gt;</span> <span class="s1">'ttttgtatgcgtacg'</span>
+<span class="nx">biomass</span><span class="p">.</span><span class="nx">rna</span><span class="p">({</span><span class="nx">length</span><span class="o">:</span> <span class="mi">3</span><span class="p">});</span>
+<span class="o">=&gt;</span> <span class="s1">'uac'</span>
+</pre></div>
+
+<h2>
+<a name="contacts" class="anchor" href="#contacts"><span class="octicon octicon-link"></span></a>Contacts</h2>
+
+<p>Alan Rice &lt;<a href="mailto:alanmrice@gmail.com">alanmrice@gmail.com</a>&gt; <a href="//twitter.com/alanmrice">@alanmrice</a></p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>biomass is licensed under the <a href="https://raw.github.com/alanrice/biomass/master/LICENSE">MIT</a> license.<br>
+Check <a href="http://choosealicense.com/licenses/mit">ChooseALicense.com</a> for details.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/alanrice">alanrice</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
