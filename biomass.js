@@ -1,5 +1,5 @@
 //  Biomass.js
-//  0.0.1
+//  0.0.2
 //  (c) 2014 Alan Rice
 //  Biomass may be freely distributed or modified under the MIT license.
 
@@ -20,7 +20,7 @@
 		root.biomass = biomass;
 	}
 
-	biomass.VERSION = "0.0.1";
+	biomass.VERSION = "0.0.2";
 
 	var dnaBases = ['a', 'c', 'g', 't'];
 	var rnaBases = ['a', 'c', 'g', 'u'];
@@ -32,20 +32,32 @@
 	biomass.dna = function (options) {
 		options = initOptions(options);
 		var length = options.length || Math.floor(Math.random() * (100 - 10 + 1)) + 10;
+		var seqCase = options.case || "upper";
 		var letters = [];
 		for (var i = 0; i < length; i++) {
-			letters.push(dnaBases[Math.floor((Math.random() * dnaBases.length))])
+			letters.push(dnaBases[Math.floor((Math.random() * dnaBases.length))]);
 		}
-		return letters.join("");
+		if (seqCase === "upper"){
+			return letters.join("").toUpperCase();
+		}
+		else{
+			return letters.join("");
+		}
 	};
 
 	biomass.rna = function (options) {
 		options = initOptions(options);
 		var length = options.length || Math.floor(Math.random() * (100 - 10 + 1)) + 10;
+		var seqCase = options.case || "upper";
 		var letters = [];
 		for (var i = 0; i < length; i++) {
-			letters.push(rnaBases[Math.floor((Math.random() * rnaBases.length))])
+			letters.push(rnaBases[Math.floor((Math.random() * rnaBases.length))]);
 		}
-		return letters.join("");
+		if (seqCase === "upper"){
+			return letters.join("").toUpperCase();
+		}
+		else{
+			return letters.join("");
+		}
 	};
 }.call(this));
