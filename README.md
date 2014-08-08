@@ -25,7 +25,7 @@ Usage
 ```js
 // Sequence functions will return between 10 and 100 characters if a length is not specified:
 biomass.dna();
-=> 'CATAGGGACCAAGCTCTGGGGAGCAACCCATAAGCACGACAATCGCGATAATACGTAGTACGCCGCTTGGTTCGTGCCTTCCCGCGCGAGT'
+=> 'CATAGGGACCAAGCTCTGGGGAGCAACCCATAAGCACGACAATCGCGATAATACGTAGTACGCCGCTTGGTTCGTGCCTTCCCGCGCG'
 biomass.rna();
 => 'GAGUAGGCUAGGCAUAGC'
 biomass.dna({length: 15});
@@ -34,10 +34,16 @@ biomass.rna({length: 3});
 => 'UAC'
 biomass.rna({length: 3, case: "lower"});
 => 'uga'
+biomass.protein();
+=> 'YHAVPVPEEYWRWNTEDVCNTFECMEVINAYRNWFFWLQEFMGPERLPAHMYCHDASAPMMFQGCWDHEEKDMGCVGP'
 ```
 
 Changelog
 -----
+### v0.1.0 - _August 10, 2014 - Eat your protein bars..._
+* Added `biomass.protein` for generating random amino acid sequences.
+* Fix version number to adequately reflect updates
+
 ### v0.0.2 - _July 26, 2014 - Uptown, downtown..._
 * Now `biomass.dna` and `biomass.rna` are case aware with a default response of uppercase letters.
 
