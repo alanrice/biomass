@@ -2,6 +2,8 @@
 
 > Generate bio data from sunlight and alphabets
 
+[![NPM](https://nodei.co/npm/biomass.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/biomass/)
+
 Install
 -----
 
