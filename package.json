@@ -16,7 +16,8 @@
   "devDependencies": {
     "mocha": "1.21.4",
     "should": "4.0.4",
-    "uglify-js": "~2.4.15"
+    "uglify-js": "~2.4.15",
+    "underscore": "1.7.0"
   },
   "scripts": {
     "build-browser": "uglifyjs biomass.js -o biomass.min.js -m -c",
