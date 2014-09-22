@@ -1,4 +1,4 @@
-# biomass
+# biomass [![Build Status](https://travis-ci.org/alanrice/biomass.svg?branch=master)](https://travis-ci.org/alanrice/biomass)
 
 > Generate bio data from sunlight and alphabets
 
