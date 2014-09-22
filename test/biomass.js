@@ -1,5 +1,4 @@
 var should = require('should'),
-_ = require('underscore'),
 biomass = require('../biomass.js');
 
 require('mocha');
