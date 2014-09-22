@@ -1,6 +1,6 @@
 {
   "name": "biomass",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generate bio data from sunlight and alphabets",
   "main": "biomass.js",
   "keywords": [
@@ -17,7 +17,8 @@
     "uglify-js": "~2.4.15"
   },
   "scripts": {
-    "build-browser": "uglifyjs biomass.js -o biomass.min.js -m -c"
+    "build-browser": "uglifyjs biomass.js -o biomass.min.js -m -c",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
