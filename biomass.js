@@ -25,7 +25,7 @@
 	var dnaBases = ['a', 'c', 'g', 't'];
 	var rnaBases = ['a', 'c', 'g', 'u'];
 	var aminoAcids = ['a', 'r', 'n', 'd', 'c', 'e', 'q', 'g', 'h', 'i', 'l', 'k', 'm', 'f', 'p', 's', 't', 'w', 'y', 'v'];
-	var ambiguousNucleotideBases = ['w', 's', 'm', 'k', 'r', 'y', 'b', 'v', 'd', 'h'];
+	var ambiguousNucleotideBases = ['w', 's', 'm', 'k', 'r', 'y', 'b', 'v', 'd', 'h', 'n'];
 	var ambiguousAminoAcids = ['x'];
 
 	function initOptions(options) {
@@ -71,10 +71,28 @@
 		options = initOptions(options);
 		var length = options.length || Math.floor(Math.random() * (100 - 10 + 1)) + 10;
 		var seqCase = options.case || "upper";
-		var alphabet = options.alphabet || "unambiguous";
+		var ambiguous = options.ambiguous || false;
 		var letters = [];
 		for (var i = 0; i < length; i++) {
-			letters.push(rnaBases[Math.floor((Math.random() * rnaBases.length))]);
+			if (ambiguous === true){
+				if(Math.random() < 0.05){
+					letters.push(ambiguousNucleotideBases[Math.floor((Math.random() * ambiguousNucleotideBases.length))]);
+				}
+				else{
+					letters.push(rnaBases[Math.floor((Math.random() * rnaBases.length))]);
+				}
+			}
+			else if (typeof ambiguous === 'number'){
+				if (Math.random() < ambiguous){
+					letters.push(ambiguousNucleotideBases[Math.floor((Math.random() * ambiguousNucleotideBases.length))]);
+				}
+				else{
+					letters.push(rnaBases[Math.floor((Math.random() * rnaBases.length))]);
+				}
+			}
+			else {
+				letters.push(rnaBases[Math.floor((Math.random() * rnaBases.length))]);
+			}
 		}
 		if (seqCase === "upper"){
 			return letters.join("").toUpperCase();
@@ -88,10 +106,28 @@
 		options = initOptions(options);
 		var length = options.length || Math.floor(Math.random() * (100 - 10 + 1)) + 10;
 		var seqCase = options.case || "upper";
-		var alphabet = options.alphabet || "unambiguous";
+		var ambiguous = options.ambiguous || false;
 		var letters = [];
 		for (var i = 0; i < length; i++) {
-			letters.push(aminoAcids[Math.floor((Math.random() * aminoAcids.length))]);
+			if (ambiguous === true){
+				if(Math.random() < 0.05){
+					letters.push(ambiguousAminoAcids[Math.floor((Math.random() * ambiguousAminoAcids.length))]);
+				}
+				else{
+					letters.push(aminoAcids[Math.floor((Math.random() * aminoAcids.length))]);
+				}
+			}
+			else if (typeof ambiguous === 'number'){
+				if (Math.random() < ambiguous){
+					letters.push(ambiguousAminoAcids[Math.floor((Math.random() * ambiguousAminoAcids.length))]);
+				}
+				else{
+					letters.push(aminoAcids[Math.floor((Math.random() * aminoAcids.length))]);
+				}
+			}
+			else {
+				letters.push(aminoAcids[Math.floor((Math.random() * aminoAcids.length))]);
+			}
 		}
 		if (seqCase === "upper"){
 			return letters.join("").toUpperCase();
